@@ -34,10 +34,10 @@ spring:
         remove-abandoned-timeout-millis: 300
         log-abandoned: true
   rabbitmq:
-      host: 122.112.204.214
-      port: 5672
-      username: admin
-      password: admin
+    host: 122.112.204.214
+    port: 5671
+    username: admin
+    password: admin
 eureka:
   client:
     service-url:
