@@ -2,5 +2,5 @@ env:
   dev
 project:
   name: order-dev
-  url: http://www.order-dev.com
+  url: http://www.order-dev1.com
 
