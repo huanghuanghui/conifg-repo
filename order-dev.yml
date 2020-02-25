@@ -1,6 +1,6 @@
 env:
   dev
 project:
-  name: order-dev
+  name: order-dev3
   url: http://www.order-dev.com
 
