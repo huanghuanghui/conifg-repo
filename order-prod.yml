@@ -1,2 +1,5 @@
 env:
   prod
+project:
+  name: order-dev3
+  url: http://www.order-prod.com

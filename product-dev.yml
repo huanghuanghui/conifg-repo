@@ -1,0 +1,6 @@
+env:
+  dev
+project:
+  name: product-dev
+  url: http://www.product-dev.com
+

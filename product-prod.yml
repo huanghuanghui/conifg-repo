@@ -1,0 +1,5 @@
+env:
+  prod
+project:
+  name: product-prod
+  url: http://www.product-prod.com
