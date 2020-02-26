@@ -1,0 +1,21 @@
+#http://localhost:8084/application/routes 查看所有路由
+#management:
+#  security:
+#    enabled: false
+#自定义路由名称
+zuul:
+  routes:
+#http://localhost:8084/product/v1/send-amqp 路由到-> http://localhost:8084/myProduct/v1/send-amqp 两个都可以访问
+    myProducts:
+      path: /myProducts/**
+      serviceId: product
+# 敏感头设置 private Set<String> sensitiveHeaders = new LinkedHashSet<>(Arrays.asList("Cookie", "Set-Cookie", "Authorization")); 默认设置这三个字段不往后传递
+# 不过滤，将其设置为空
+      sensitiveHeaders:
+
+#简洁写法
+    product: /myProducts/**
+#    禁止路由（禁止前端访问接口）
+  ignored-patterns:
+    - /**/v1/send-amqp
+    - /myProduct/v1/send-amqp

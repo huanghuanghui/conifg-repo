@@ -1,0 +1,6 @@
+env:
+  dev
+project:
+  name: api-geteway-dev
+  url: http://www.api-geteway-dev.com
+
