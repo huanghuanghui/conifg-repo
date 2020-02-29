@@ -10,7 +10,7 @@ spring:
       password: mysql#JN99@dev
       # 使用Druid数据源
       type: com.alibaba.druid.pool.DruidDataSource
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       druid:
         filters: stat
         maxActive: 10
