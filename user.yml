@@ -1,0 +1,13 @@
+#配置应用名称
+spring:
+  application:
+    name: order
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      discovery:
+        enabled: true
+#        填写注册到eureka上的应用名称(指的是配置中心在Eureka上的名称)
+        service-id: CONFIG

@@ -6,6 +6,11 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
+    config:
+      discovery:
+        enabled: true
+#        填写注册到eureka上的应用名称(指的是配置中心在Eureka上的名称)
+        service-id: CONFIG
   datasource:
       url: jdbc:mysql://192.168.1.34:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
       username: root

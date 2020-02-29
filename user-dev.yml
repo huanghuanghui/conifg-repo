@@ -1,16 +1,9 @@
-#配置应用名称
 spring:
-  application:
-    name: order
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
-    config:
-      discovery:
-        enabled: true
-#        填写注册到eureka上的应用名称(指的是配置中心在Eureka上的名称)
-        service-id: CONFIG
+  redis:
+    host: 122.112.204.214
+    database: 9
+    port: 6379
+    password: jnsaa@redis.master
   datasource:
       url: jdbc:mysql://192.168.1.34:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
       username: root
@@ -36,30 +29,6 @@ spring:
         remove-abandoned: true
         remove-abandoned-timeout-millis: 300
         log-abandoned: true
-  rabbitmq:
-    host: 192.168.1.189
-    port: 5672
-    username: huanghuanghui
-    password: Huang123
-    #虚拟主机地址
-    virtual-host: /
-    #连接超时时间
-    connection-timeout: 15000
-    publisher-confirms: true
-    publisher-returns: true
-    template:
-      mandatory: true
-    #消费端配置
-    listener:
-      simple:
-        #消费端
-        concurrency: 5
-        #最大消费端数
-        max-concurrency: 10
-        #自动签收auto  手动 manual
-        acknowledge-mode: manual
-        #限流（海量数据，同时只能过来一条）
-        prefetch: 1
 eureka:
   client:
     service-url:
